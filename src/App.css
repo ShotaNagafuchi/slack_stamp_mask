@@ -1,0 +1,71 @@
+/* Additional custom styles for Slack-like appearance */
+
+.slack-logo {
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, #4A154B 0%, #E01E5A 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-section {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  border: 1px solid #E1E1E1;
+}
+
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1D1C1D;
+  font-size: 14px;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effects for buttons */
+.btn-slack-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 21, 75, 0.2);
+}
+
+.btn-slack-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus states for better accessibility */
+.input-slack:focus {
+  box-shadow: 0 0 0 3px rgba(74, 21, 75, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .form-section {
+    padding: 16px;
+    margin: 0 16px;
+  }
+}

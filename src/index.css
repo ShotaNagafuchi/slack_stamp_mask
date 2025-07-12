@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
+    background-color: #FFFFFF;
+    color: #1D1C1D;
+    line-height: 1.5;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  /* Slack Button Styles */
+  .btn-slack-primary {
+    @apply bg-slack-primary hover:bg-slack-primary-hover text-white font-medium px-slack-lg py-slack-md rounded-slack transition-colors duration-200 shadow-slack;
+  }
+  
+  .btn-slack-secondary {
+    @apply bg-white hover:bg-slack-surface text-slack-text-primary font-medium px-slack-lg py-slack-md rounded-slack border border-slack-border transition-colors duration-200 shadow-slack;
+  }
+  
+  /* Slack Input Styles */
+  .input-slack {
+    @apply w-full px-slack-md py-slack-md border border-slack-border rounded-slack bg-white text-slack-text-primary placeholder-slack-text-tertiary focus:outline-none focus:ring-2 focus:ring-slack-primary focus:border-transparent transition-colors duration-200;
+  }
+  
+  /* Slack Card Styles */
+  .card-slack {
+    @apply bg-white rounded-slack-lg shadow-slack-md border border-slack-border;
+  }
+  
+  /* Error Message Styles */
+  .error-slack {
+    @apply text-slack-error text-sm mt-1 px-slack-sm py-1 bg-red-50 rounded-slack border-l-4 border-slack-error;
+  }
+  
+  /* Success Message Styles */
+  .success-slack {
+    @apply text-slack-success text-sm mt-1 px-slack-sm py-1 bg-green-50 rounded-slack border-l-4 border-slack-success;
+  }
+}
