@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:extension": "vite build && npm run copy-extension-files",
+    "copy-extension-files": "cp public/manifest.json dist/ && cp src/content.js dist/ && cp src/background.js dist/ && cp -r public/icons dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
